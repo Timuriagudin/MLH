@@ -24,5 +24,8 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/register": "^7.12.1"
-  }
+  },
+  "report": "allure generate --clean && allure open",
+  "clean": "rm -rf allure-results",
+  "test": "npm run clean && wdio wdio.conf.js && npm run report"
 }
