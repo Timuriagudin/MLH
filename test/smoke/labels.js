@@ -41,24 +41,25 @@ describe('My Little Hero', function () {
     describe('Labels are correct', function () {
 
         it('TC-006 Label for name', function () {
-            const label = $$(sel.labelName)[0].getAttribute('title');
-            expect(label).toEqual(exp.labelName);
+            const text = $$(sel.labelName)[0].getAttribute('title');
+            expect(text).toEqual(exp.labelName);
         });
 
         it('TC-007 Label for gender', function () {
-            const label = $$(sel.labelName)[1].getAttribute('title');
-            expect(label).toEqual(exp.labelGender);
+            const text = $$(sel.labelName)[1].getAttribute('title');
+            expect(text).toEqual(exp.labelGender);
         });
 
         it('TC-008 Label for age', function () {
-            const label = $$(sel.labelName)[2].getAttribute('title');
-            expect(label).toEqual(exp.labelAge);
+            const text = $$(sel.labelName)[2].getAttribute('title');
+            expect(text).toEqual(exp.labelAge);
         });
 
         it('TC-009 Label for story', function () {
-            const label = $$(sel.labelName)[3].getAttribute('title');
-            expect(label).toEqual(exp.labelStory);
+            const text = $$(sel.labelName)[3].getAttribute('title');
+            expect(text).toEqual(exp.labelStory);
         });
 
     });
+
 });
