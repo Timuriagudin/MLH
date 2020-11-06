@@ -8,5 +8,9 @@
   "story1": ".ant-select-selector",
   "create": ".ant-btn",
   "storySelection": ".ant-select-show-arrow",
-  "storyType": ".ant-select-item-option"
+  "storyType": ".ant-select-item-option",
+  "uploadButton": ".ant-upload-select-picture-card",
+  "tryAgain": ".btn-primary",
+  "placeHolderStory": ".ant-select-selection-placeholder",
+  "placeHolderGender": ".ant-radio-input"
 }

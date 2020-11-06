@@ -1,10 +1,18 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
+  "name": "Timur",
+  "gender": {
+    "he": 0,
+    "she": 1,
+    "it": 2
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "age": 123,
+  "storyType": {
+    "overcomingTheMonster": 0,
+    "rebirth": 1,
+    "Quest": 2,
+    "journeyAndReturn": 3,
+    "ragsAndRiches": 4,
+    "tragedy": 5,
+    "comedy": 6
+  }
 }

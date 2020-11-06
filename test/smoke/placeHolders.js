@@ -1,6 +1,7 @@
 const sel = require('../../data/selectors.json');
 const exp = require('../../data/expected.json');
 
+
 describe('PlaceHolders', function () {
 
     describe('Placeholders are displayed', function () {
@@ -44,6 +45,7 @@ describe('PlaceHolders', function () {
         it('TC-030 Placeholder for Create button) ', function () {
             const text = $(sel.create).getProperty('innerText');
             expect(text).toEqual(exp.placeHolderCreate);
+
         });
     });
 })

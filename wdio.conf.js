@@ -17,11 +17,19 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/smoke/mainFunctionality.js'
+        './test/smoke/inputs.js',
+        './test/smoke/labels.js',
+        './test/smoke/mainFunctionality.js',
+        './test/smoke/placeHolders.js',
+        './test/smoke/createStoryWithPic.js'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        // './test/smoke/inputs.js',
+        // './test/smoke/mainFunctionality.js',
+        // './test/smoke/labels.js',
+        // './test/smoke/placeHolders.js',
+        //'./test/smoke/createStoryWithPic.js'
     ],
     //
     // ============
@@ -46,7 +54,7 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
@@ -107,7 +115,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone'],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
@@ -128,10 +136,10 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec','dot',['allure', {outputDir: 'allure-results'}]],
-    reporterOptions: { allure: { outputDir: 'allure-results' } },
+    reporters: ['spec', 'dot', ['allure', {outputDir: 'allure-results'}]],
+    reporterOptions: {allure: {outputDir: 'allure-results'}},
 
-    
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -216,7 +224,7 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+    afterTest: function (test, context, {error, result, duration, passed, retries}) {
         if (!passed) {
             browser.takeScreenshot();
         }
@@ -266,10 +274,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
