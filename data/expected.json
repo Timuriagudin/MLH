@@ -11,5 +11,6 @@
   "placeHolderAge": "Hero's age",
   "placeHolderStory": "Type of the story",
   "placeHolderImage": "drag and drop your image here or browse",
-  "placeHolderCreate": "Create!"
+  "placeHolderCreate": "Create!",
+  "aster": "::before"
 }
